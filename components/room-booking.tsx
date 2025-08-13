@@ -15,7 +15,7 @@ export function RoomBooking({ roomType }: RoomBookingProps) {
 
         <button
           data-be-url="https://hotels.cloudbeds.com/reservation/S3GnS9"
-          className="modern-cta font-medium px-8 py-3 text-lg transition-all duration-300 hover:scale-105 bg-[#14B8A6] hover:bg-[#0f766e] text-white rounded-2xl shadow-lg"
+          className="bg-white hover:bg-slate-50 text-[#14B8A6] font-semibold px-8 py-3 text-lg rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border-none cursor-pointer"
         >
           Reservar ahora
         </button>

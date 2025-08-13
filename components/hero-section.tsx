@@ -31,26 +31,7 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             data-be-url="https://hotels.cloudbeds.com/reservation/S3GnS9"
-            style={{
-              backgroundColor: "#14B8A6",
-              color: "white",
-              fontWeight: "500",
-              padding: "12px 32px",
-              fontSize: "18px",
-              borderRadius: "16px",
-              border: "none",
-              cursor: "pointer",
-              boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-              transition: "all 0.3s ease",
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.backgroundColor = "#0f766e"
-              e.currentTarget.style.transform = "scale(1.05)"
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.backgroundColor = "#14B8A6"
-              e.currentTarget.style.transform = "scale(1)"
-            }}
+            className="bg-[#14B8A6] hover:bg-[#0f766e] text-white font-medium px-8 py-3 text-lg rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 border-none cursor-pointer"
           >
             Reservar ahora
           </button>
