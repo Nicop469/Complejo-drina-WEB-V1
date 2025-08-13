@@ -11,7 +11,26 @@ export function CTASection() {
 
         <button
           data-be-url="https://hotels.cloudbeds.com/reservation/S3GnS9"
-          className="modern-cta font-medium px-8 py-3 text-lg transition-all duration-300 hover:scale-105 bg-[#14B8A6] hover:bg-[#0f766e] text-white rounded-2xl shadow-lg"
+          style={{
+            backgroundColor: "white",
+            color: "#14B8A6",
+            fontWeight: "600",
+            padding: "12px 32px",
+            fontSize: "18px",
+            borderRadius: "16px",
+            border: "none",
+            cursor: "pointer",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+            transition: "all 0.3s ease",
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.backgroundColor = "#f8fafc"
+            e.currentTarget.style.transform = "scale(1.05)"
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.backgroundColor = "white"
+            e.currentTarget.style.transform = "scale(1)"
+          }}
         >
           Reservar ahora
         </button>

@@ -64,7 +64,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -79,7 +79,26 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <script src="https://hotels.cloudbeds.com/widget/load/S3GnS9/immersive" async />
+        <script src="https://hotels.cloudbeds.com/widget/load/S3GnS9/overlay?newWindow=1"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('load', function() {
+                // Initialize Cloudbeds widget after page loads
+                if (typeof window.CloudbedsWidget !== 'undefined') {
+                  console.log('Cloudbeds widget loaded successfully');
+                } else {
+                  console.log('Waiting for Cloudbeds widget to load...');
+                  setTimeout(function() {
+                    if (typeof window.CloudbedsWidget !== 'undefined') {
+                      console.log('Cloudbeds widget loaded after delay');
+                    }
+                  }, 2000);
+                }
+              });
+            `,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

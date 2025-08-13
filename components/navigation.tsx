@@ -38,7 +38,25 @@ export function Navigation() {
             </Link>
             <button
               data-be-url="https://hotels.cloudbeds.com/reservation/S3GnS9"
-              className="modern-cta text-white font-semibold px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 bg-[#14B8A6] hover:bg-[#0f766e]"
+              style={{
+                backgroundColor: "#14B8A6",
+                color: "white",
+                fontWeight: "600",
+                padding: "12px 32px",
+                borderRadius: "16px",
+                border: "none",
+                cursor: "pointer",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                transition: "all 0.3s ease",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.backgroundColor = "#0f766e"
+                e.currentTarget.style.boxShadow = "0 10px 15px -3px rgba(0, 0, 0, 0.1)"
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.backgroundColor = "#14B8A6"
+                e.currentTarget.style.boxShadow = "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+              }}
             >
               Reservar
             </button>
@@ -87,7 +105,17 @@ export function Navigation() {
               </Link>
               <button
                 data-be-url="https://hotels.cloudbeds.com/reservation/S3GnS9"
-                className="modern-cta text-white font-semibold w-full py-4 rounded-2xl shadow-lg bg-[#14B8A6] hover:bg-[#0f766e]"
+                style={{
+                  backgroundColor: "#14B8A6",
+                  color: "white",
+                  fontWeight: "600",
+                  padding: "16px",
+                  borderRadius: "16px",
+                  border: "none",
+                  cursor: "pointer",
+                  width: "100%",
+                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                }}
               >
                 Reservar ahora
               </button>
